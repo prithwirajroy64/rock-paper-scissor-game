@@ -67,7 +67,36 @@
 
     <script>
 
+         alert("press r for rock, p for paper and s for scissor");
+
         let result = document.querySelector('#result');
+
+
+        document.addEventListener("keypress", function (event) {
+            userType(event.key);
+
+
+        });
+
+        function userType(key) {
+            switch (key) {
+                case "r":
+                    second();
+                    computerTurn();
+                    checkWinner();
+                    break;
+                case "p":
+                    first();
+                    computerTurn();
+                    checkWinner();
+                    break;
+                case "s":
+                    third();
+                    computerTurn();
+                    checkWinner();
+                    break;
+            }
+        }
 
         let user;
         function first() {
